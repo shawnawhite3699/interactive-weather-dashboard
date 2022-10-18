@@ -1,0 +1,16 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 1000;
+    color: #f8f8ff;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, blue, yellow);
+    height: 100px;
+    text-align: center;
+}
