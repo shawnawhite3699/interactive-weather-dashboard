@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
-    
+  <header class = "header p-2">
+    <h1>Weather Dashboard</h1>
+  </header>
+  
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-3 p-2 search-column">
+          <form class="border p-2" id="search-form">
+              <h4>Search for a City:</h2>
+              <input id="enterCity" type="text" autofocus="true" class="form-input" placeholder="Enter City Name"><button type="button" id="searchBtn"
+              class="btn btn-primary"><i class="fas fa-search"></i></button>
+          </form>
+          <div class = "past-search border" id = "past-search-buttons"></div>
+      </div>
+      
     <script src="script.js"></script>
 </body>
 </html>

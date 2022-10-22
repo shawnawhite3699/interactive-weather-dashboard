@@ -9,9 +9,10 @@ h1 {
     color: #f8f8ff;
 }
 
-.navbar {
+header {
     background-image: linear-gradient(to right, blue, yellow);
-    height: 100px;
-    justify-content: center;
+    height: 90px;
+    text-align: center;
+
 }
 
