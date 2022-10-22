@@ -61,22 +61,22 @@ var displayWeather = function(weather, searchCity){
    cityDisplayEl.appendChild(weatherIcon);
 
    //Pull and place current temp
-   var temperatureEl = document.createElement("span");
-   temperatureEl.textContent = "Temperature: " + weather.main.temp + " °F";
-   temperatureEl.classList = "list-group-item"
-   currentWeatherEl.appendChild(temperatureEl);
+   var currTempEl = document.createElement("span");
+   currTempEl.textContent = "Temperature: " + weather.main.temp + " °F";
+   currTempEl.classList = "list-group-item"
+   currentWeatherEl.appendChild(currTempEl);
 
    //Pull and place current humidity
-   var humidityEl = document.createElement("span");
-   humidityEl.textContent = "Humidity: " + weather.main.humidity + "%";
-   humidityEl.classList = "list-group-item"
-   currentWeatherEl.appendChild(humidityEl);
+   var currHumidityEl = document.createElement("span");
+   currHumidityEl.textContent = "Humidity: " + weather.main.humidity + "%";
+   currHumidityEl.classList = "list-group-item"
+   currentWeatherEl.appendChild(currHumidityEl);
 
    //Pull and place current wind speed
-   var windSpeedEl = document.createElement("span");
-   windSpeedEl.textContent = "Wind Speed: " + weather.wind.speed + " MPH";
-   windSpeedEl.classList = "list-group-item"
-   currentWeatherEl.appendChild(windSpeedEl);
+   var currWindEl = document.createElement("span");
+   currWindEl.textContent = "Wind Speed: " + weather.wind.speed + " MPH";
+   currWindEl.classList = "list-group-item"
+   currentWeatherEl.appendChild(currWindEl);
 }
 
 //Get 5 day forecast from API
@@ -103,42 +103,38 @@ var displayFiveDay = function(forecast){
         
        var forecastEl=document.createElement("div");
        forecastEl.classList = "card bg-primary text-light m-3";
+       futureWeatherEl.appendChild(forecastEl);
 
-       //create date element
+       //Card date using Moment.js
        var forecastDate = document.createElement("h5")
-       forecastDate.textContent= moment.unix(dailyForecast.dt).format("MMM D, YYYY");
+       forecastDate.textContent= moment.unix(dailyForecast.dt).format("L");
        forecastDate.classList = "card-header text-center"
        forecastEl.appendChild(forecastDate);
-
        
-       //create an image element
+       //Pull in and place future conditions icon
        var weatherIcon = document.createElement("img")
        weatherIcon.classList = "card-body text-center";
        weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${dailyForecast.weather[0].icon}@2x.png`);  
-
-       //append to forecast card
        forecastEl.appendChild(weatherIcon);
        
-       //create temperature span
-       var forecastTempEl=document.createElement("span");
-       forecastTempEl.classList = "card-body text-center";
-       forecastTempEl.textContent = dailyForecast.main.temp + " °F";
+       //Pull and place future temp
+       var futureTempEl=document.createElement("span");
+       futureTempEl.classList = "card-body";
+       futureTempEl.textContent = "Temperature: " + dailyForecast.main.temp + " °F";
+       forecastEl.appendChild(futureTempEl);
+       
+       //Pull and place future humidity
+       var futureHumidityEl=document.createElement("span");
+       futureHumidityEl.classList = "card-body";
+       futureHumidityEl.textContent = "Humidity: " + dailyForecast.main.humidity + "%";
+       forecastEl.appendChild(futureHumidityEl);
 
-       //append to forecast card
-       forecastEl.appendChild(forecastTempEl);
-
-       var forecastHumEl=document.createElement("span");
-       forecastHumEl.classList = "card-body text-center";
-       forecastHumEl.textContent = dailyForecast.main.humidity + "  %";
-
-       //append to forecast card
-       forecastEl.appendChild(forecastHumEl);
-
-       // console.log(forecastEl);
-       //append to five day container
-       futureWeatherEl.appendChild(forecastEl);
+       //Pull and place future wind speed
+       var futureWindEl=document.createElement("span");
+       futureWindEl.classList = "card-body";
+       futureWindEl.textContent = "Wind Speed: " + dailyForecast.wind.speed + " MPH";
+       forecastEl.appendChild(futureWindEl);
     }
-
 }
 
 var searchHistory = function(searchHistory){
