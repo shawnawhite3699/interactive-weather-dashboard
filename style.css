@@ -19,3 +19,9 @@ header {
 h4 {
     font-weight: bold;
 }
+
+.list-group-item{
+    line-height: 1;
+    border: none;
+    padding: 0.75rem 0.2rem;
+}
