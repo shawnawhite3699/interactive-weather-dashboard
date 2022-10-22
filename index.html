@@ -10,10 +10,10 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
-    <link
+    <!--<link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
-    />
+    />-->
     <link rel="stylesheet" href="style.css">
     <title>Weather Dashboard</title>
 </head>
@@ -24,15 +24,31 @@
   
   <main class="container-fluid">
     <div class="row">
-      <div class="col-12 col-md-3 p-2 search-column">
+      <div class="col-12 col-md-3 p-2">
           <form class="border p-2" id="search-form">
-              <h4>Search for a City:</h2>
+              <h4>Search for a City:</h4>
               <input id="enterCity" type="text" autofocus="true" class="form-input" placeholder="Enter City Name"><button type="button" id="searchBtn"
               class="btn btn-primary"><i class="fas fa-search"></i></button>
           </form>
           <div class = "past-search border" id = "past-search-buttons"></div>
       </div>
-      
-    <script src="script.js"></script>
+
+      <div class="col-12 col-md-9">
+        <div class = "row border current-city" id = "current-forecast">
+          <div class = "col-12">
+            <h2 id="entered-city"></h2>
+            <div id = "current-weather-conditions" class = "list-group"></div>
+          </div>  
+        </div>
+        
+        <div class = "row border" id = "five-day-forecast">
+            <h2 class= "col-12" id = "forecast"></h2>
+            <div class = "d-flex" id = "five-day-weather"></div>
+        </div>  
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
