@@ -17,20 +17,53 @@
       crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
     />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row navbar">
+    <main class="flex-column min-100-vh">
+      <div class="row navbar">
+        <div class="col-12">
+          <h1>Weather Dashboard</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <div class="row">
             <div class="col-12">
-                <h1>Weather Dashboard</h1>
+              <h3>Search for a City:</h3>
+            </div>
+          </div>
+        
+        <form id="user-form" class="card-body">
+          <input id="enterCity" type="text" autofocus="true" class="form-input" placeholder="Enter City Name"><button type="button" id="searchBtn" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+
+      <div id="weatherContent" class="col-9 pb-4 pt-4">
+        <div class="row pb-3 mr-2 ml-2">
+            <div id="cityDetail" class="col-12 border rounded px-3 py-3">
+                <!-- display currentCity here text with p-->
             </div>
         </div>
-    </div>
+
+        <div class="row pb-2 pt-1">
+            <div class="col-12 ml-2">
+                <h3>5-Day Forecast:</h3>
+            </div>
+        </div>
+
+        <div id="fiveDay" class="row pl-2">
+            <!-- add 5 day forecast info here -->
+        </div>
+      </div>
+    </main> 
     
+<script src="srcipt.js"></script>
+
 </body>
 </html>
