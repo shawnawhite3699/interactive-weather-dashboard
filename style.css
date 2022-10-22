@@ -12,6 +12,6 @@ h1 {
 .navbar {
     background-image: linear-gradient(to right, blue, yellow);
     height: 100px;
-    text-align: center;
+    justify-content: center;
 }
 

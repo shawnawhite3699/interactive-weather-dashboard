@@ -1,69 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <title>Weather Dashboard</title>
 </head>
-
 <body>
-    <main class="flex-column min-100-vh">
-      <div class="row navbar">
-        <div class="col-12">
-          <h1>Weather Dashboard</h1>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-3">
-          <div class="row">
-            <div class="col-12">
-              <h3>Search for a City:</h3>
-            </div>
-          </div>
-        
-        <form id="user-form" class="card-body">
-          <input id="enterCity" type="text" autofocus="true" class="form-input" placeholder="Enter City Name"><button type="button" id="searchBtn" class="btn btn-primary"><i class="fas fa-search"></i></button>
-        </form>
-      </div>
-
-      <div id="weatherContent" class="col-9 pb-4 pt-4">
-        <div class="row pb-3 mr-2 ml-2">
-            <div id="cityDetail" class="col-12 border rounded px-3 py-3">
-                <!-- display currentCity here text with p-->
-            </div>
-        </div>
-
-        <div class="row pb-2 pt-1">
-            <div class="col-12 ml-2">
-                <h3>5-Day Forecast:</h3>
-            </div>
-        </div>
-
-        <div id="fiveDay" class="row pl-2">
-            <!-- add 5 day forecast info here -->
-        </div>
-      </div>
-    </main> 
     
-<script src="srcipt.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
