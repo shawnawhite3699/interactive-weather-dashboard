@@ -144,7 +144,7 @@ var searchHistory = function(searchHistory) {
     searchHistoryEl.textContent = searchHistory;
     searchHistoryEl.classList = "d-flex w-100 btn-light border p-2";
     searchHistoryEl.setAttribute("data-city",searchHistory)
-    searchHistoryEl.setAttribute("type", "submit");
+    searchHistoryEl.setAttribute("type","submit");
     searchHistoryButtonEl.prepend(searchHistoryEl);
 }
 
