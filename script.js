@@ -137,26 +137,26 @@ var displayFiveDay = function(forecast){
     }
 }
 
-var searchHistory = function(searchHistory){
- 
-    // console.log(searchHistory)
+//Store and display search history
+var searchHistory = function(searchHistory) {
 
     searchHistoryEl = document.createElement("button");
     searchHistoryEl.textContent = searchHistory;
     searchHistoryEl.classList = "d-flex w-100 btn-light border p-2";
     searchHistoryEl.setAttribute("data-city",searchHistory)
     searchHistoryEl.setAttribute("type", "submit");
-
     searchHistoryButtonEl.prepend(searchHistoryEl);
 }
 
-var searchHistoryHandler = function(event){
+//Call weather conditions from search history
+var searchHistoryHandler = function(event) {
     var city = event.target.getAttribute("data-city")
     if(city){
-        getCityWeather(city);
+        getWeather(city);
         getFiveDay(city);
     }
 }
 
+//Event listeners
 searchFormEl.addEventListener("submit", searchSubmitHandler);
 searchHistoryButtonEl.addEventListener("click", searchHistoryHandler);
