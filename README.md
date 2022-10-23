@@ -24,6 +24,8 @@ THEN I am again presented with current and future conditions for that city
 
 ## Screenshot
 
+![alt text](interactive-weather-dashboard.png)
 
 ## Deployed Application
 
+https://shawnawhite3699.github.io/interactive-weather-dashboard/
